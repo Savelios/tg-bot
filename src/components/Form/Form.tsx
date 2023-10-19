@@ -7,37 +7,37 @@ const Form = () => {
   const [street, setStreet] = useState("");
   const [subject, setSubject] = useState("physical");
 
-  const {tg} = useTelegram();
+  const { tg } = useTelegram();
 
   const onSendData = useCallback(() => {
     const data = {
-        country,
-        street,
-        subject
-    }
+      country,
+      street,
+      subject,
+    };
     tg.senData(JSON.stringify(data));
-  }, [])
+  }, []);
 
-  useEffect (() => {
-    tg.onEvent('mainButtonClicked', onSendData)
+  useEffect(() => {
+    tg.onEvent("mainButtonClicked", onSendData);
     return () => {
-        tg.OffEvent('mainButtonClicked', onSendData)
-    }
-  },[])
+      tg.offEvent("mainButtonClicked", onSendData);
+    };
+  }, []);
 
   useEffect(() => {
     tg.MainButton.setParams({
-        text: 'Отправить данные'
-    })
-  }, [])
+      text: "Отправить данные",
+    });
+  }, []);
 
   useEffect(() => {
     if (!street || !country) {
-        tg.MainButton.hide();
-    }else {
-        tg.MainButton.show();
+      tg.MainButton.hide();
+    } else {
+      tg.MainButton.show();
     }
-  },[country, street])
+  }, [country, street]);
 
   const onChangeCountryInput = (e: ChangeEvent<HTMLInputElement>) => {
     setCountry(e.target.value);
