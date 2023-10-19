@@ -1,27 +1,25 @@
-import React, { useEffect } from 'react';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
+import { useTelegram } from "./hooks/useTelegram";
+
 declare global {
   interface Window {
     Telegram: {
-      WebApp: any; 
+      WebApp: any;
     };
   }
 }
 
-
-
 function App() {
+  const { onToggleButton, tg } = useTelegram();
 
-  // useEffect(() => {
-  //   tg.ready();
-  // },[])
-
-
+  useEffect(() => {
+    tg.ready();
+  },[])
 
   return (
     <div className="App">
-      work
-
+      <button onClick={onToggleButton}>toggle</button>
     </div>
   );
 }
