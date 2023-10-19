@@ -3,11 +3,12 @@ import Button from '../Button/Button';
 import './ProductItem.css';
 
 interface Product {
-  title: string;
-  description: string;
-  price: number;
-  imageSrc: string;
-}
+    id: string;
+    title: string;
+    price: number;
+    description: string;
+    imageSrc: string;
+  }
 
 interface ProductItemProps {
   product: Product;
