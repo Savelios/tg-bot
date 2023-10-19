@@ -43,7 +43,7 @@ const Form = () => {
     setCountry(e.target.value);
   };
 
-  const onChangeCountrySelect = (e: ChangeEvent<HTMLSelectElement>) => {
+  const onChangeSubjectSelect = (e: ChangeEvent<HTMLSelectElement>) => {
     setSubject(e.target.value);
   };
 
@@ -68,7 +68,7 @@ const Form = () => {
         value={street}
         onChange={onChangeStreet}
       />
-      <select value={subject} onChange={onChangeCountrySelect}>
+      <select value={subject} onChange={onChangeSubjectSelect}>
         <option value={"physical"}>Физ. лицо</option>
         <option value={"legal"}>Юр. лицо</option>
       </select>
