@@ -1,10 +1,11 @@
 import React from "react";
 import Button from "../Button/Button";
-import "Header.css";
+import "./Header.css";
 import { useTelegram } from "../../hooks/useTelegram";
-const { user, onClose } = useTelegram();
 
 const Header = () => {
+  const { user, onClose } = useTelegram();
+
   return (
     <div className={"header"}>
       <Button className={"button"} onClick={onClose}>
