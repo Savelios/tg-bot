@@ -35,7 +35,7 @@ const getTotalPrice = (items: Product[] = []): number => {
 };
 
 const sendProductData = (data: any, queryId: string) => {
-  fetch("http://89.147.109.197:8080/web-data", {
+  fetch("https://hackthesky.ru/web-data", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
