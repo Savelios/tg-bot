@@ -8,10 +8,11 @@
 
 .img {
     width: 100%;
-    background: lightgray;
+    background: rgb(54, 54, 54);
     height: 100px;
     margin: 0 auto;
     background: var(--tg-theme-button-color);
+    border-radius: 10%;
 }
 
 .description {
@@ -20,4 +21,23 @@
 
 .add-btn {
     width: 100%;
+    border: 1px solid black;
+    margin-top: 20px;
+    border-radius: 5%;
+}
+
+.title {
+    margin-top: 5px;
+}
+
+.description {
+    margin-top: 5px;
+}
+
+.price {
+    margin-top: 5px;
+}
+
+.button {
+    background-color: gray;
 }
