@@ -35,7 +35,7 @@ const getTotalPrice = (items: Product[] = []): number => {
 };
 
 const sendProductData = (data: any, queryId: string) => {
-  fetch("http://89.147.109.197:4000/web-data", {
+  fetch("http://89.147.109.197:8000/web-data", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
