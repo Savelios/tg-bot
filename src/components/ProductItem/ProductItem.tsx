@@ -26,7 +26,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, className = '', onAd
   };
 
   return (
-    <div className={`product ${className}`}>
+    <div className="product">
       <ProductImage src={product.imageSrc} />
       <div className="title">{product.title}</div>
       <div className="description">{product.description}</div>

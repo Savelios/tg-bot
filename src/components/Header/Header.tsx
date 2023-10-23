@@ -7,11 +7,11 @@ const Header = () => {
   const { user, onClose } = useTelegram();
 
   return (
-    <div className={"header"}>
+    <div className="header">
       <Button className={"button"} onClick={onClose}>
         Закрыть
       </Button>
-      <span className={"username"}>{user?.username}</span>
+      <span className="username">{user?.username}</span>
     </div>
   );
 };
