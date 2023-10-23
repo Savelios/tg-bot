@@ -1,4 +1,5 @@
 [[redirects]]
-from = "/*"
-to = "index.html"
-status = 200
+  from = "/api/*"
+  to = "http://89.147.109.197:8080/web-data"
+  status = 200
+  force = true
